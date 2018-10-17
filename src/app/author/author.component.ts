@@ -8,19 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AuthorComponent {
 
-  title = "Angular";
-  authors; 
+  title = 'Angular';
+  authors;
   length;
   subTitle;
 
   constructor(service: AuthorService) {
     this.authors = service.getAuthors();
     this.length = this.authors.length;
-    this.subTitle =  this.length + " " + (this.length == 1 ? "author"  : "authors");
-   }  
-
-  
-  
-
-  
+    this.subTitle =  this.length + ' ' + (this.length === 1 ? 'author'  : 'authors');
+   }
 }
+
